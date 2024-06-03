@@ -113,6 +113,9 @@ public class ZdmCrawler {
                 }
             });
 
+            //
+             System.out.println(System.getenv("emailAccount"));
+            System.out.println(System.getenv("emailPassword"));
             MimeMessage message = new MimeMessage(session);
             message.setFrom(System.getenv("emailAccount"));
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(System.getenv("emailAccount")));
