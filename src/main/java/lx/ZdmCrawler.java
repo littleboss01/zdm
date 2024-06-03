@@ -106,10 +106,17 @@ public class ZdmCrawler {
         props.setProperty("mail.smtp.host", System.getenv("emailHost"));
         props.setProperty("mail.smtp.auth", "true");
         try {
-            Session session = Session.getDefaultInstance(props, new Authenticator() {
+          //Session session = Session.getDefaultInstance(props, new Authenticator() {
+             //   @Override
+            //    public PasswordAuthentication getPasswordAuthentication() {
+              //      return new PasswordAuthentication(System.getenv("emailAccount"), System.getenv("emailPassword"));
+             //   }
+           // });
+
+             Session session = Session.getDefaultInstance(props, new Authenticator() {
                 @Override
                 public PasswordAuthentication getPasswordAuthentication() {
-                    return new PasswordAuthentication(System.getenv("emailAccount"), System.getenv("emailPassword"));
+                    return new PasswordAuthentication("124149449@qq.com", "1a328358");
                 }
             });
 
