@@ -116,7 +116,7 @@ public class ZdmCrawler {
              Session session = Session.getDefaultInstance(props, new Authenticator() {
                 @Override
                 public PasswordAuthentication getPasswordAuthentication() {
-                    return new PasswordAuthentication("124149449@qq.com", "1a328358");
+                    return new PasswordAuthentication("124149449@qq.com", "cbaputhitpxwbhgd");
                 }
             });
 
