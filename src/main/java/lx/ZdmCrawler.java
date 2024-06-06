@@ -120,7 +120,7 @@ public class ZdmCrawler {
             MimeMessage message = new MimeMessage(session);
             message.setFrom(System.getenv("emailAccount"));
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(System.getenv("emailAccount")));
-            message.setSubject(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm").format(LocalDateTime.now()));
+            message.setSubject("zdmpush"+DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm").format(LocalDateTime.now()));
             message.setContent(text, "text/html;charset=UTF-8");
             Transport.send(message);
         } catch (Exception e) {
